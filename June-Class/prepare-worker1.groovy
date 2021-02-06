@@ -11,17 +11,9 @@ node {
         stage("Install java") {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install java-1.8.0-openjdk-devel -y"
         }
-        stage("Install git") {
+        stage("Instakk git") {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install git -y"
-        }
-        stage("Install ansible") {
-            sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install ansible -y"
         }
     }
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d906624c29c976ef16b73e98cf8e021bb009854c
