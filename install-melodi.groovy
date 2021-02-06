@@ -9,7 +9,6 @@ node {
         sh "rm -rf ansible-melodi && git clone https://github.com/azizbekmol/ansible-melodi.git"
     }
 
-
     withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-master', keyFileVariable: 'SSHKEY', passphraseVariable: '', usernameVariable: 'SSHUSERNAME')]) {
         stage("Install Melodi"){
             sh """
